@@ -1,5 +1,7 @@
 import { useCounter } from "../hooks/useCounter";
 import { useFetch } from "../hooks/useFetch"
+import { LoadingQuote } from "./LoadingQuote";
+import { Quote } from "./Quote";
 
 export const MultipleCustomHooks = () => {
 
@@ -16,15 +18,8 @@ console.log(character)
 
         {
           isLoading ? 
-           (<div className="alert alert-info text-center" >
-              Loading...
-            </div>) :
-           (
-            <blockquote className="blockquote text-end" >
-              <p  className="mb-1">{ quote }</p>
-              <footer className="blockquote-footer" >{ character }</footer>
-            </blockquote>
-           )
+           <LoadingQuote/> :
+           <Quote quote={quote} character={character} />
         }
 
         <button className="btn btn-warning" onClick={ () => increment(1) } >Next Quote</button>
