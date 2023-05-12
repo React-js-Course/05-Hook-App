@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
@@ -12,11 +13,14 @@ import './index.css'
 // import { Memorize } from './06-memos/Memorize'
 // import { MemorizeHook } from './06-memos/MemorizeHook'
 // import { CallbackHook } from './06-memos/CallbackHook'
-import { Padre } from './07-tarea-memo/Padre'
+// import { Padre } from './07-tarea-memo/Padre'
+import { TodoApp } from './08-useReduce/TodoApp'
+
+// import './08-useReduce/intro-reduce'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Padre />
-  </React.StrictMode>
+  // <React.StrictMode>
+    <TodoApp />
+  // </React.StrictMode>
 )
